@@ -1,0 +1,39 @@
+/* teacher-interface.component.scss */
+
+/* Adjust styling as per your design preferences */
+
+mat-toolbar {
+  background-color: #1976d2; /* Adjust the primary color for the toolbar */
+  color: #fff; /* Text color for the toolbar */
+}
+
+mat-card {
+  margin: 20px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border-radius: 8px; /* Optional: Add border radius for a softer look */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Add box shadow for depth */
+}
+
+button {
+  margin-top: 15px;
+  min-width: 150px; /* Optional: Set a minimum width for consistency */
+}
+
+.image-preview img {
+  max-width: 100%;
+  max-height: 300px; /* Adjust as needed */
+  margin-top: 15px;
+  border-radius: 8px; /* Optional: Add border radius for a softer look */
+}
+
+.error-message {
+  margin-top: 15px;
+  color: #e74c3c; /* Red color for error messages */
+}
+
+/* Optional: Add more styling as per your design requirements */

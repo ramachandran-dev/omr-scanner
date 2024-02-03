@@ -1,0 +1,20 @@
+<!-- results-display.component.html -->
+
+<div *ngIf="processedData">
+  <h2>Processed Data</h2>
+  
+  <!-- Display student information and answers -->
+  <div *ngFor="let student of processedData.students" [ngClass]="{'error-row': student.hasError}">
+    <p>{{ student.name }} - Answers: {{ student.answers.join(', ') }}</p>
+  </div>
+  
+  <!-- Display error messages, if any -->
+  <div *ngIf="processedData.errors" class="error-message">
+    <p>Errors: {{ processedData.errors.join(', ') }}</p>
+  </div>
+
+  <!-- Display a message when there are no errors -->
+  <div *ngIf="!processedData.errors && processedData.students.length === 0" class="no-error-message">
+    <p>No errors found, and no student data available.</p>
+  </div>
+</div>

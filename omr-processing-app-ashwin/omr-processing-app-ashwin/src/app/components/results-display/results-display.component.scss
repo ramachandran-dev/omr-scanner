@@ -1,0 +1,14 @@
+/* results-display.component.css */
+
+.error-row {
+  background-color: #ffe6e6; /* Light red background for error rows */
+  border: 1px solid #ff3333; /* Red border for error rows */
+  padding: 5px;
+  margin-bottom: 5px;
+}
+
+.error-message {
+  color: #ff3333; /* Red color for error messages */
+  font-weight: bold;
+  margin-top: 10px;
+}

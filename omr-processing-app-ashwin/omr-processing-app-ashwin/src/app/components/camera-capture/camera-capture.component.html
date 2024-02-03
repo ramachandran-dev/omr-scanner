@@ -1,0 +1,35 @@
+<div class="scanner-container">
+  <h1 id="hed">OMR Scanner</h1>
+  <p id="hed1">Place the OMR sheet in front of the camera</p>
+
+  <div class="camera-container">
+    <webcam
+      #webcam
+      [width]="webcamWidth"
+      [height]="webcamHeight"
+      [trigger]="triggerObservable"
+      (imageCapture)="captureImage($event)"
+      (initError)="handleInitError($event)"
+    ></webcam>
+
+    <button mat-raised-button color="primary" (click)="goBackToTeacherInterface()">Go Back</button>
+
+    <div *ngIf="feedbackMessage" class="feedback-message">
+      {{ feedbackMessage }}
+    </div>
+  </div>
+
+  <!-- Captured image -->
+  <div *ngIf="capturedImage" class="captured-image-container ">
+    <h2>Captured Image</h2>
+    <img [src]="capturedImage.imageAsDataUrl" alt="Captured Image" id="capturedImage">
+    
+    <canvas #canvasresult id="capturedImage"></canvas>
+
+    <div>
+      <button mat-raised-button color="primary" (click)="retake()">Retake</button>
+      <button mat-raised-button color="accent" (click)="save()">Save</button>
+      
+    </div>
+
+

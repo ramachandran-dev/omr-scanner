@@ -1,0 +1,73 @@
+/* styles.scss or your component-specific styles file */
+
+.app-container {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #ffffff;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 3vw; /* Adjusted margin for responsiveness */
+
+  h1 {
+    color: #333;
+    font-size: 2rem;
+    @media (max-width: 768px) {
+      font-size: 1.5rem; /* Adjust font size for smaller screens */
+    }
+  }
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 3vw;
+
+  a {
+    text-decoration: none;
+    padding: 2vw; /* Adjusted padding for responsiveness */
+    margin: 0 1vw; /* Adjusted margin for responsiveness */
+    color: #333;
+    border-radius: 8px;
+    transition: background-color 0.3s;
+    font-weight: bold;
+
+    &:hover {
+      background-color: #007bff;
+      color: #fff;
+    }
+
+    &.active {
+      background-color: #007bff;
+      color: #fff;
+    }
+  }
+}
+
+footer {
+  text-align: center;
+  margin-top: 3vw;
+  color: #777;
+}
+
+/* Additional Styles for Specific Components if Needed */
+
+.image-preview {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.feedback-message {
+  margin-top: 2vw;
+  font-size: 1.2rem;
+  color: #ff6347; /* Tomato color for error messages */
+  @media (max-width: 768px) {
+    font-size: 1rem; /* Adjust font size for smaller screens */
+  }
+}
